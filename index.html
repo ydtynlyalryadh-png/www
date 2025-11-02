@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>متجر يد تعين على الرياضه</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        .accordion-button {
+            direction: rtl !important;
+            text-align: right !important;
+            white-space: normal !important;
+            padding-left: 2rem !important;
+            padding-right: 1rem !important;
+            position: relative !important;
+        }
+        /* حدد مكان الأيقونة + / - في اليسار يدوياً */
+        
+        .accordion-button::after {
+            position: absolute !important;
+            left: 0.75rem !important;
+            right: auto !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        
+        .contact-link {
+            display: flex;
+            justify-content: space-between;
+            /* الأيقونة (السهم) على اليسار، المحتوى على اليمين */
+            align-items: center;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-family: 'Cairo', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #007bff;
+            color: #fff;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* الأيقونة على اليمين في RTL */
+            direction: rtl;
+        }
+        
+        .contact-info i {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+        
+        .contact-text h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .contact-text h4 {
+            margin: 0;
+            font-weight: normal;
+        }
+        
+        .contact-link i.arrow {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            background: #d4cdff;
+            /* الخلفية اللي طلبتها */
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            /* خلي النص أبيض للوضوح */
+            font-family: 'Cairo', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #6659c0;
+            /* لون أغمق شوي عند التمرير */
+            color: #fff;
+        }
+        
+        .contact-info i {
+            font-size: 28px;
+            flex-shrink: 0;
+            color: #fff;
+            /* الأيقونات أبيض */
+        }
+        
+        .contact-link i.arrow {
+            font-size: 20px;
+            flex-shrink: 0;
+            color: #fff;
+            /* سهم أبيض */
+        }
+        /* هاهاها */
+        /* هاهاها */
+        /* هاهاها */
+        /* هاهاها */
+        
+        .fixed-contact-buttons {
+            position: fixed;
+            top: 40%;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 10000;
+        }
+        
+        .fixed-contact-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            animation: float 2.5s ease-in-out infinite;
+            cursor: pointer;
+        }
+        /* ألوان الأزرار */
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        
+        .call-btn {
+            background-color: #007bff;
+            animation-delay: 1.2s;
+            /* تأخير لزر الاتصال */
+        }
+        /* حركة تموج بسيطة */
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                transform: translateY(-8px);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+            }
+        }
+        /* عند تمرير الماوس يتوقف التموج */
+        
+        .fixed-contact-buttons a:hover {
+            animation-play-state: paused;
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body style=" font-family: 'Cairo', sans-serif;">
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <!-- <h1>Scholar</h1> -->
+                            <img src="assets/images/logooo.png" alt="شعار المؤسسة" style="height: 120px;">
+
+                        </a>
+
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#serv">الأدوات</a></li>
+                            <li class="scroll-to-section"><a href="#contact">تواصل معنا </a></li>
+                            <li class="scroll-to-section"><a href="#whay"> الرئيسية</a></li>
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner" id="whay" style="padding-bottom: 30px;  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="owl-carousel owl-banner">
+                        <div class="item item-1">
+                            <div class="header-text" style="direction: rtl; text-align: center; margin: 0 auto; max-width: 100%;">
+                                <span class="category">نرحب بك في</span>
+                                <!-- <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br> -->
+                                <center>
+                                    <h2 style="direction: rtl; font-size: 1.5rem; margin-bottom: 15px; "> متجر يد تعين على الرياضه </h2>
+
+                                </center>
+                                <p style="direction: rtl;">
+
+                                </p>
+
+
+
+                                <br>
+                                <div class="main-button">
+                                    <a href="#">راسلنا واتساب</a>
+                                </div>
+                                <br>
+                                <div class="main-button">
+                                    <a href="#"> اتصل بنا</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <section class="section courses" id="serv" style="direction: rtl;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <!-- <h6>Latest Courses</h6> -->
+                        <h2>الأدوات </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row event_box">
+
+
+
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/s1.png" alt=""></a>
+                            <span class="price"><i class="fa fa-video-camera fa-2x"></i></span>
+                            <!-- <span class="price"><h6> <i class="fa fa-video-camera fa-1x"></i></h6></span> -->
+
+
+                        </div>
+                        <div class="down-content">
+                            <h4> مضرب</h4>
+                            <span class="author">مضرب طابة.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/s2.png" alt=""></a>
+                            <span class="price"><i class="fa fa-video-camera fa-2x"></i></span>
+
+
+                        </div>
+                        <div class="down-content">
+                            <h4>كرة سلة</h4>
+                            <span class="author">كرة سلة.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/s3.png" alt=""></a>
+                            <span class="price"><i class="fa fa-video-camera fa-2x"></i></span>
+                            <!-- <span class="price"><h6> <i class="fa fa-video-camera fa-1x"></i></h6></span> -->
+
+
+                        </div>
+                        <div class="down-content">
+                            <h4>كرة قدم</h4>
+                            <span class="author">كرة قدم.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/s4.png" alt=""></a>
+                            <span class="price"><i class="fa fa-video-camera fa-2x"></i></span>
+                            <!-- <span class="price"><h6> <i class="fa fa-video-camera fa-1x"></i></h6></span> -->
+
+
+                        </div>
+                        <div class="down-content">
+                            <h4>مجموعة كرات </h4>
+                            <span class="author">مجموعة كرات.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/s5.png" alt=""></a>
+                            <span class="price"><i class="fa fa-video-camera fa-2x"></i></span>
+                            <!-- <span class="price"><h6> <i class="fa fa-video-camera fa-1x"></i></h6></span> -->
+
+
+                        </div>
+                        <div class="down-content">
+                            <h4>اثقال لليد </h4>
+                            <span class="author">اثقال لليد.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+                    <div class="events_item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section about-us">
+
+
+
+
+
+    </div>
+    <br><br>
+
+
+
+
+
+
+    <div class="contact-us section" id="contact" style="direction: rtl; font-family: 'Cairo', sans-serif;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="section-heading">
+                        <h2>تواصل معنا</h2>
+
+                        <!-- جوال -->
+                        <a href="tel:++96655555555" class="contact-link" target="_blank" rel="noopener">
+                            <div class="contact-info">
+                                <i class="fa fa-phone" style="color:#007bff;"></i>
+                                <div class="contact-text">
+                                    <h6>الجوال</h6>
+                                    <h4>++96655555555</h4>
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-left arrow"></i>
+                        </a>
+
+                        <!-- واتساب -->
+                        <a href="https://wa.me/+96655555555" class="contact-link" target="_blank" rel="noopener">
+                            <div class="contact-info">
+                                <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+                                <div class="contact-text">
+                                    <h6>واتساب</h6>
+                                    <h4>++96655555555</h4>
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-left arrow"></i>
+                        </a>
+
+                        <!-- ايميل -->
+                        <a href="mailto:dfughsa@yfs.yfd" class="contact-link" target="_blank" rel="noopener">
+                            <div class="contact-info">
+                                <i class="fa fa-envelope" style="color:#007bff;"></i>
+                                <div class="contact-text">
+                                    <h6>الايميل</h6>
+                                    <h4>dfughsa@yfs.yfd</h4>
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-left arrow"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer style="background-color: #7a6ad8; color: white; padding: 20px 0; font-family: 'Cairo', sans-serif; text-align: center; direction: rtl;">
+        <div class="container">
+            <img src="assets/images/logooo.png" alt="" style=" max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;">
+            
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- أزرار الاتصال الثابتة -->
+    <div class="fixed-contact-buttons">
+        <a href="https://wa.me/+96655555555" target="_blank" class="whatsapp-btn" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+96655555555" class="call-btn" aria-label="اتصال">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+
+</body>
+
+</html>
